@@ -19,9 +19,8 @@ def main():
         if (first_char_is_letter != second_char_is_letter):
             validPart2 += 1
 
-        print("min: {} max: {} letter: {} password:{}".format(min, max, letter, password))
-        print("Valid password Part I: {}".format(validPart1))
-        print("Valid password Part II: {}".format(validPart2))
+    print("Valid password Part I: {}".format(validPart1))
+    print("Valid password Part II: {}".format(validPart2))
 
 def get_input():
     with open(path.join(path.dirname(__file__), 'input')) as f:
