@@ -6,7 +6,7 @@ import re
 def main():
     bag_dict = bag_dictionary()    
     outer_bag_result = []
-    
+
     inner_bags = ['shiny gold']
     while len(inner_bags) > 0:
         outer_bags = []
@@ -27,7 +27,7 @@ def bag_dictionary():
     bag_dict = {}
     for line in get_input():
         outer_bag = line.split('contain')[0].split('bags')[0].strip()
-        inner_bags = re.findall('\d+ [a-z]+ [a-z]+', line.split('contain')[1])
+        inner_bags = re.findall(r'\d+ [a-z]+ [a-z]+', line.split('contain')[1])
         bag_dict[outer_bag] = inner_bags
     return bag_dict
 
